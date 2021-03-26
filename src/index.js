@@ -18,7 +18,6 @@ app.post("/account", (request, response) => {
         return response.status(400).json({error: "Customer already exists!"});
     }
 
-
     customers.push({
         cpf,
         name,
@@ -29,6 +28,7 @@ app.post("/account", (request, response) => {
 
     return response.status(201).send();
 });
+
 
 
 app.listen(3333, ()=> {
